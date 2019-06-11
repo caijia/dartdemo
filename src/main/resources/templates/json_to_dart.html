@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Json转Dart实体</title>
+    <link type="text/css" href="/common.css" rel="stylesheet">
+    <script src="/clipboard.min.js"></script>
+</head>
+<body>
+<div class="body">
+    <form method="post" action="/jsonToDart" class="form">
+        <div class="div-title">
+            <span>请输入json字符串&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+            <input type="submit" value="转换成Dart" class="btn-margin"/>
+            <input id="copy" type="button" value="复制Dart代码" class="btn-margin" data-clipboard-target="#result"/>
+        </div>
+
+        <div class="div-content">
+            <div class="div-input">
+                <textarea name="json" th:utext="${json}" placeholder="请输入json字符串" class="input"></textarea>
+            </div>
+
+            <div class="div-result">
+                <p id="result" th:utext="${dart}" placeholder=""/>
+            </div>
+        </div>
+    </form>
+</div>
+
+<script>
+    var clipboard = new Clipboard('copy', {
+        target: function() {
+            return document.querySelector('#result');
+        }
+    });
+</script>
+</body>
+</html>

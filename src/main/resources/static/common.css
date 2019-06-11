@@ -1,0 +1,53 @@
+.body{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+
+html,body{
+    height: 100%;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    flex: 1;
+}
+
+.btn-margin{
+    margin-left: 20px;
+}
+
+.div-title {
+    display: flex;
+    flex-direction: row;
+    width: 50%;
+}
+
+.div-content{
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+}
+
+.input{
+    width: 100%;
+    height: 100%;
+    border: #aaaaaa solid 2px;
+    border-radius: 2px;
+}
+
+.div-input {
+    margin-top: 20px;
+    flex: 1;
+}
+
+.div-result{
+    margin-top: 20px;
+    margin-left: 20px;
+    border: #aaaaaa solid 2px;
+    border-radius: 4px;
+    flex: 1;
+}
